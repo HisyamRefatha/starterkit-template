@@ -1,7 +1,10 @@
+import './assets/main.css'
+
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import { Tooltip } from "bootstrap";
 import App from "./App.vue";
+import ui from '@nuxt/ui/vue-plugin'
 
 /*
 TIP: To get started with clean router change path to @/router/clean.ts.
@@ -30,7 +33,7 @@ initApexCharts(app);
 initInlineSvg(app);
 initKtIcon(app);
 initVeeValidate();
-
+app.use(ui);
 app.use(i18n);
 
 app.directive("tooltip", (el) => {
